@@ -77,6 +77,7 @@ cleanup() {
 
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
     trap cleanup EXIT
+    setup
     if [[ ${#} -gt 0 ]] ; then
         case "${1}" in
             "plan")
